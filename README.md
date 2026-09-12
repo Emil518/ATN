@@ -6,7 +6,13 @@ Bot Discord qui :
 - répond à tous les messages privés qui lui sont envoyés ;
 - affiche ses réponses dans des embeds sans couleur ;
 - ajoute un menu déroulant quand la réponse contient plusieurs choix ;
-- mémorise brièvement le contexte de chaque conversation en mémoire.
+- mémorise brièvement le contexte de chaque conversation en mémoire ;
+- répond uniquement à partir du programme Greendale en Mouvement fourni ;
+- refuse les questions hors sujet ;
+- limite chaque utilisateur à 20 messages ou choix toutes les 5 minutes.
+
+Le document de référence est conservé dans `programme.pdf` et dans sa version
+texte `programme.txt`, utilisée par le bot au démarrage.
 
 ## Déploiement avec Railway
 
@@ -47,6 +53,8 @@ Les secrets ne sont volontairement pas inclus dans le ZIP. Ne les mets pas dans
 | `BOT_NAME` | `Assistant` | Nom utilisé dans les consignes internes |
 | `BOT_LANGUAGE` | `français` | Langue par défaut |
 | `MAX_HISTORY` | `12` | Nombre maximal de messages conservés par conversation |
+| `RATE_LIMIT_MAX` | `20` | Nombre maximal de demandes par utilisateur |
+| `RATE_LIMIT_WINDOW_MINUTES` | `5` | Durée de la fenêtre de quota |
 
 ## Tester en local
 
